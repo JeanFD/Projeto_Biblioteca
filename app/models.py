@@ -5,7 +5,7 @@ class Pessoa(models.Model):
     nome = models.CharField(max_length=100, default='')
     email = models.CharField(default = '')
     telefone = models.CharField(default = 0)
-    cidade = models.ForeignKey("Cidade", on_delete=models.CASCADE, null=True, blank=True)
+    cidade = models.ForeignKey("Cidade", on_delete=models.CASCADE, verbose_name='Cidade', null=True)
     class Meta:
         abstract = True
     def __str__(self):
