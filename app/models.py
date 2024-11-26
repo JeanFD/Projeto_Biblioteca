@@ -99,6 +99,7 @@ class Cidade(models.Model):
 
 class Emprestimo(models.Model):
     data_emp = models.DateField(verbose_name='Data de Emprestimo')
+    data_dev = models.DateField(verbose_name='Data de Devolucao', null = True)
     livro_emp = models.ForeignKey(Livro, on_delete=models.CASCADE, verbose_name='livro emprestado')
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, verbose_name='Usuario que pegou o livro')
     def __str__(self):
