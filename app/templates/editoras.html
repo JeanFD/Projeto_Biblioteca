@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+    {% block content %}
+        {% include 'navbar.html' %}
+
+  <div class="container mt-5">
+    <h1 class="mb-4">Editoras</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">CNPJ</th>
+                <th scope="col">Razão Social</th>
+                <th scope="col">Site da editora</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in editoras %}
+            <tr>
+                <td>{{ a.nome }}</td>
+                <td>{{ a.email }}</td>
+                <td>{{ a.telefone }}</td>
+                <td>{{ a.cidade }}</td>
+                <td>{{ a.cnpj }}</td>
+                <td>{{ a.razao_social }}</td>
+                <td>{{ a.site }}</td>
+            </tr>
+            
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+  
+  {% endblock %}

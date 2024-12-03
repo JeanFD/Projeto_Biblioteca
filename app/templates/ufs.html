@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+    {% block content %}
+        {% include 'navbar.html' %}
+
+  <div class="container mt-5">
+    <h1 class="mb-4">UFs</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Sigla</th>            </tr>
+        </thead>
+        <tbody>
+            {% for a in ufs %}
+            <tr>
+                <td>{{ a.sigla }}</td>
+            </tr>
+            
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+  
+  {% endblock %}

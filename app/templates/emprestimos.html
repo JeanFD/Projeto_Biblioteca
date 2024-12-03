@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+    {% block content %}
+        {% include 'navbar.html' %}
+
+  <div class="container mt-5">
+    <h1 class="mb-4">Empréstimos</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Data de Empréstimo</th>
+                <th scope="col">Data de Devolução</th>
+                <th scope="col">Livro</th>
+                <th scope="col">Usuário</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in emprestimos %}
+            <tr>
+                <td>{{ a.data_emp }}</td>
+                <td>{{ a.data_dev }}</td>
+                <td>{{ a.livro_emp }}</td>
+                <td>{{ a.usuario }}</td>
+            </tr>
+            
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+  
+  {% endblock %}
